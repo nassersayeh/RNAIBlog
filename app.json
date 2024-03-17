@@ -30,7 +30,7 @@
       "output": "static"
     },
     "plugins": [
-      "expo-router"
+      ["expo-router",{"origin":"https://rnai-blog.vercel.app"}]
     ]
   }
 }
