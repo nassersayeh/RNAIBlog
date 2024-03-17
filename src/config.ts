@@ -1,0 +1,1 @@
+export const ORIGIN = 'https://rnai-blog.vercel.app'

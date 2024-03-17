@@ -4,6 +4,7 @@ import {  useLocalSearchParams } from "expo-router";
 import { getAllPosts, getPost } from "../reposotiroy/postRepo";
 import Markdown from 'react-native-markdown-display';
 import Head from 'expo-router/head';
+import { ORIGIN } from "../config";
 
 export  function generateStaticParams(): Promise<Record<string, string>[]> {
     const posts =  getAllPosts()
@@ -15,7 +16,7 @@ export  function generateStaticParams(): Promise<Record<string, string>[]> {
 
 const PostDetailsPage = ()=>{
     const {slug} = useLocalSearchParams()
-    const [post,setPost] = useState(getPost(slug))
+    const [post,setPost] = useState(getPost(slug.toString()))
     if(!post){
         return <Text>Post not Found</Text>
     }
@@ -25,6 +26,7 @@ const PostDetailsPage = ()=>{
         <Head>
         <title>{post.title}</title>
         <meta name="description" content={post.description} />
+        <meta property="og:image" content={`${ORIGIN}/thumbnails/${post.thumbnail}`} />
       </Head>
 
         <ScrollView
@@ -40,7 +42,7 @@ const PostDetailsPage = ()=>{
         }}
         >
             <Text style={{fontSize:30,marginBottom:20}}>{post.title}</Text>
-            <Image source={{uri:`/thumbnails/${post.thumbnail}`}} style={{width:'100%' , aspectRatio:16/9}} alt={post.title}/>
+            <Image source={{uri:`${ORIGIN}/thumbnails/${post.thumbnail}`}} style={{width:'100%' , aspectRatio:16/9}} alt={post.title}/>
             <Markdown>
             {post.content}
           </Markdown>
