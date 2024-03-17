@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import {  useLocalSearchParams } from "expo-router";
 import { getAllPosts, getPost } from "../reposotiroy/postRepo";
 import Markdown from 'react-native-markdown-display';
+import Head from 'expo-router/head';
 
 export  function generateStaticParams(): Promise<Record<string, string>[]> {
     const posts =  getAllPosts()
@@ -20,6 +21,12 @@ const PostDetailsPage = ()=>{
     }
 
     return (
+        <>
+        <Head>
+        <title>{post.title}</title>
+        <meta name="description" content={post.description} />
+      </Head>
+
         <ScrollView
         style={{
             flex: 1,
@@ -37,6 +44,7 @@ const PostDetailsPage = ()=>{
             {post.content}
           </Markdown>
         </ScrollView>
+        </>
     )
 }
 
