@@ -5,7 +5,7 @@ slug:'post1',
 date: '2024-02-28T13:27:28Z',
 title : 'My first post',
 description : 'This is My first post',
-thumbnail:'',
+thumbnail:'post1.png',
 content : `
 # Ferendo dolentem solis virgo fide ubi flaventibus
 

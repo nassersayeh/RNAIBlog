@@ -5,7 +5,7 @@ slug:'post2',
 date: '2024-02-28T14:27:28Z',
 title : 'My Second post',
 description : 'This is My Second post',
-thumbnail:'',
+thumbnail:'post2.png',
 content : `
 # Antra natam exempla nec illa ostendens planxitque
 
