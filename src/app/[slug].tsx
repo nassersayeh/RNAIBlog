@@ -1,9 +1,15 @@
 import { View , Text, ScrollView } from "react-native";
 import React, { useState } from "react";
 import {  useLocalSearchParams } from "expo-router";
-import { getPost } from "../reposotiroy/postRepo";
+import { getAllPosts, getPost } from "../reposotiroy/postRepo";
 import Markdown from 'react-native-markdown-display';
 
+export  function generateStaticParams(): Promise<Record<string, string>[]> {
+    const posts =  getAllPosts()
+    // Return an array of params to generate static HTML files for.
+    // Each entry in the array will be a new page.
+    return posts.map(post => ({ slug: post.slug }));
+  }
 
 
 const PostDetailsPage = ()=>{
