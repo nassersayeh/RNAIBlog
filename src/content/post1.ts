@@ -3,18 +3,19 @@ import { Post } from "../types/post";
 const post: Post = {
 slug:'post1',
 date: '2024-02-28T13:27:28Z',
-title : 'My first post',
-description : 'This is My first post',
+title : 'Who is Ai Pilot Palestine',
+description : 'in this page we descripe who is Ai pilot company in palestine and who is the funder and owner and what is the field of work there.',
 thumbnail:'post1.png',
 content : `
-# Ferendo dolentem solis virgo fide ubi flaventibus
+# Ai Pilot Palestine
 
-## Tecto alte poscit hodierna luminis cecidisse quicquid
+## Who we are ?
 
-Lorem markdownum annos: **sed moenibus solebat**; operum, timor tulit domus
-Phrygiae. Felicior nostro audax. [Telo vulnus](http://subita.org/). Vulnera
-cortice partes, haeremusque latebat undas manu invectae inclusum labefactaque
-aura.
+We are a software company operating in Palestine and provide software management and application building using the latest technologies in the market
+Our main branch is located in the city of Nablus on Granada Street - Freitekh Building.
+AIPILOT is owned and managed by **Mr. Nasser Al-Sayeh**, who founded the company in 2023.
+The company works in several fields, including building applications and websites with high efficiency and a strong and experienced work team in the global market.
+
 
     readmeReadme = surfaceKerningTrackback(emoticon_boolean) /
             prompt_balancing_eps;
